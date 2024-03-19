@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Enrollment Form</title>
+    <link rel="stylesheet" href="FormStyle.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="Navcontainer">
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#AboutUs">About Us</a></li>
+                <li><a href="enrollment.html">Enrollment</a></li>
+                <li><a href="school-life.html">School Life</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+            </ul>
+            <div class="menu-btn">&#9776;</div>
+        </div>
+    </nav>
+    
+<div class="container">
+    <h2>School Enrollment Form</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Parent's' Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required> 
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="grade">Grade:</label>
+            <select id="grade" name="grade" required>
+                <option value="">Select Grade</option>
+                <option value="1">Grade 1</option>
+                <option value="2">Grade 2</option>
+                <option value="3">Grade 3</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="grade">Branch</label>
+            <select id="Branch" name="Branch" required>
+                <option value="">Select a Branch</option>
+                <option value="1">Main</option>
+                <option value="2">Naivasha</option>
+                <option value="3">Kayole</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
