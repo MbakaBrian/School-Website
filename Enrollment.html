@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Enrollment Form</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="FormStyle.css">
+    
 </head>
 <body>
     <nav id="navbar">
-        <div class="Navcontainer">
-            <div class="logo">Logo</div>
+        <div class="container">
+            <div class="logo"><img src="images/logo-search-grid-1x.png" alt=""></div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#AboutUs">About Us</a></li>
+                <li class="dropdown">
+                  <a href="AboutUs.html">About Us</a>
+                  <div class="dropdown-content">
+                      <a href="OurHistory.html">Our History</a>
+                      <a href="OurTeam.html">Our Team</a>
+                  </div>
+              </li>
                 <li><a href="enrollment.html">Enrollment</a></li>
-                <li><a href="school-life.html">School Life</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
+                <li class="dropdown">
+                  <a href="SchoolLife.html">Tour</a>
+                  <div class="dropdown-content">
+                      <a href="#">Video Tour</a>
+                      <a href="#">Photo Tour</a>
+                  </div>
+              </li>
+                <li class="dropdown">
+                  <a href="#ourFacilities">Facilities</a>
+                  <div class="dropdown-content">
+                      <a href="MainBranch.html">Peppercorn Branch</a>
+                      <a href="TownBranch.html">Naivasha Branch</a>
+                      <a href="KayoleBranch.html">Kayole Branch</a>
+                  </div>
+              </li>
             </ul>
             <div class="menu-btn">&#9776;</div>
         </div>
     </nav>
-    
-<div class="container">
     <h2>School Enrollment Form</h2>
+<div class="container-fluid">
     <form action="http://localhost:5000/data" method="post">
         <div class="form-group">
             <label for="fullName">Full Name:</label>

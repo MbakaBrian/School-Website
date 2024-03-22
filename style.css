@@ -7,14 +7,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   padding: 3px;
+}
+
+.logo img {
+width: 35%;
+height: 35%;
+margin: 0%;
+padding: 0%;
+}
+
+.column {
+    flex: 1;
     padding: 20px;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.diplayborders {
+    margin: 2px;
+    background-color: #70707070;
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 10px; /* Match the border radius of the container */
+}
+.diplayborders:hover{
+    animation: zoomIn 0.3s forwards;
+    color: white;
+    padding: auto;
+    margin: auto;
 }
 
+/* Ensure images don't exceed container height */
+.column img {
+    max-height: 100%;
+    width: auto;
+}
 .nav-links {
     list-style: none;
     margin: 0;
@@ -25,6 +50,12 @@ body {
 .nav-links li {
     margin-right: 20px;
 }
+/* Navbar link hover effect */
+#navbar a:hover {
+    color: #00f; /* Change text color to blue on hover */
+    text-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Add shadow effect */
+}
+
 
 .nav-links li:last-child {
     margin-right: 0;
@@ -35,11 +66,41 @@ body {
     color: #ffffff;
 }
 
+#backgroundVideo {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: width 0.5s, height 0.5s; /* Add transition for smooth zoom effect */
+}
+
+
+.carousel-caption {
+    position: relative;
+    top: 50%;
+    left: 40%;
+    transform: translate(0%, -40%);
+    text-align: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a background color with some transparency for better readability */
+    padding: 20px; /* Optional: Add padding for better spacing */
+    color: white; /* Optional: Set text color */
+  }
 .menu-btn {
     display: none;
     cursor: pointer;
     font-size: 24px;
 }
+h3 {
+    padding: 10px;
+    font-family: "Holtwood One SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 /*home button enroll button style */
 #HomeEnrollButton {
     justify-content: center;
@@ -60,7 +121,7 @@ body {
 }
 /* Sticky Navbar */
 #navbar {
-    position: sticky;
+    position: relative;
     top: 0;
     background-color: #ff0000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -82,10 +143,19 @@ body {
     transition: background-color 0.3s ease;
 }
 #landingPage{
+    color: white;
     margin: 0;
     padding: 0;
     height: 200px;
-    background: linear-gradient(to bottom, #cccccc, #999999),url(images/gettyimages-1363289778-612x612.jpg);
+    background-color: #1b0f3ac4;
+}
+#landingPage h2,#landingPage p{
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#landingPage h2{
+    padding-top: 25px;
 }
 /*footer styles */ 
 footer {
@@ -109,6 +179,18 @@ footer a:hover {
     color: #bbb;
 }
 
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1); /* Zoom in effect */
+  }
+}
+
+/* Apply the animation to the text when hovered */
+
+
 @media (max-width: 768px) {
     .menu-btn {
         display: block;
@@ -130,11 +212,58 @@ footer a:hover {
     }
 }
 
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    border-radius: 20%;
+    position: absolute;
+    background-color: #142041;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    margin: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Delayed display */
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 /* style.css */
 
 /* Hide images on small screens */
 @media (max-width: 767px) {
-    .container .column img {
+    .container .column {
+        display: block;
+        width: 100%;
+    }
+
+    .container .column img:not(.carousel-item img) {
         display: none;
     }
 }
