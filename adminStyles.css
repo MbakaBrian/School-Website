@@ -58,7 +58,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #007bff;
+  background-color: #C62828; /* Update the primary color */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -68,7 +68,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #8e0000; /* Darken the color on hover */
 }
 
 /* Responsive styles */
