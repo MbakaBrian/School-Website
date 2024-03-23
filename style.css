@@ -22,17 +22,8 @@ padding: 0%;
     padding: 20px;
 }
 
-.diplayborders {
-    margin: 2px;
-    background-color: #70707070;
-    border: 2px solid #ccc; /* Add border */
-    border-radius: 10px; /* Match the border radius of the container */
-}
-.diplayborders:hover{
-    animation: zoomIn 0.3s forwards;
-    color: white;
-    padding: auto;
-    margin: auto;
+.diplayborders h2:hover{
+    color: rgb(255, 255, 255);
 }
 
 /* Ensure images don't exceed container height */
@@ -50,12 +41,6 @@ padding: 0%;
 .nav-links li {
     margin-right: 20px;
 }
-/* Navbar link hover effect */
-#navbar a:hover {
-    color: #00f; /* Change text color to blue on hover */
-    text-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Add shadow effect */
-}
-
 
 .nav-links li:last-child {
     margin-right: 0;
@@ -63,7 +48,7 @@ padding: 0%;
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
 }
 
 #backgroundVideo {
@@ -80,7 +65,7 @@ padding: 0%;
 
 .carousel-caption {
     position: relative;
-    top: 50%;
+    top: 40%;
     left: 40%;
     transform: translate(0%, -40%);
     text-align: center;
@@ -89,6 +74,10 @@ padding: 0%;
     padding: 20px; /* Optional: Add padding for better spacing */
     color: white; /* Optional: Set text color */
   }
+  .carousel-item img {
+    max-height: 600px; /* Adjust the maximum height as needed */
+    width: auto;
+}
 .menu-btn {
     display: none;
     cursor: pointer;
@@ -100,16 +89,21 @@ h3 {
     font-weight: 400;
     font-style: normal;
   }
+#missionSection{
+    color: white;
+    background-color: #ff0000;
+    border-radius: 10px;
+    padding: 10px;
+}
   
 /*home button enroll button style */
 #HomeEnrollButton {
-    justify-content: center;
+    justify-content:center;
     text-align:center;
 }
 #HomeEnrollButton a {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #4CAF50; /* Green */
+    padding: 5px 10px;
+    background-color: #ff0000; /* Green */
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -123,7 +117,7 @@ h3 {
 #navbar {
     position: relative;
     top: 0;
-    background-color: #ff0000;
+    background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -201,24 +195,35 @@ footer a:hover {
         position: absolute;
         top: 60px; /* Height of the navbar */
         left: 0;
-        background-color: #fff;
+        background-color: white;
         width: 100%;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links li {
+        color:black;
         display: block;
         margin: 10px 0;
     }
+    .nav-links li a{
+        color:black;
+    }
+    .nav-links.active {
+        color: #333;
+        display: block;
+    }
 }
+/* Add styles for the active class to show/hide the navigation links */
+
 
 /* Dropdown menu */
 .dropdown-content {
     display: none;
+    width: 200px;
     border-radius: 20%;
     position: absolute;
     background-color: #142041;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
     z-index: 1;
 }
 
@@ -262,9 +267,12 @@ footer a:hover {
         display: block;
         width: 100%;
     }
+    .container{
+        display: block;
+    }
 
-    .container .column img:not(.carousel-item img) {
-        display: none;
+    img{
+        width: 100px;
     }
 }
 

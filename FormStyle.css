@@ -76,39 +76,14 @@ body, h2, form, input, textarea {
         max-width: 90%; /* Adjust the maximum width for smaller screens */
     }
   }
-  
-  /* Navigation styles */
-  .Navcontainer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-  }
+
   
   .logo {
       font-size: 24px;
       font-weight: bold;
   }
   
-  .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-  }
-  
-  .nav-links li {
-      margin-right: 20px;
-  }
-  
-  .nav-links li:last-child {
-      margin-right: 0;
-  }
-  
-  .nav-links a {
-      text-decoration: none;
-      color: #c40000; /* Changed color to white */
-  }
+
   
   .menu-btn {
       display: none;
@@ -117,11 +92,9 @@ body, h2, form, input, textarea {
   }
   
   .container {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      margin: auto;
+      margin-bottom: 20px;
+      padding: 0 140px;
       background-color: #f9f9f9;
   }
   
